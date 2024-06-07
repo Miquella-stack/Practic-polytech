@@ -1,0 +1,345 @@
+*{
+    padding: 0;
+    margin: auto;
+    font-family: NT_Somic;
+}
+/* подгрузка собственных шрифтов */
+@font-face {
+    font-weight: 400; /*Соответствует значению normal*/
+    font-family: NT_Somic;
+    src: url("../static/fronts/NT_Somic/01_NTSomic-Regular.ttf");
+  }
+  
+  @font-face {
+    font-weight: 700; /* Соответствует значению bold */
+    font-family: NT_Somic;
+    src: url("../static/fronts/NT_Somic/03_NTSomic-Bold.ttf");
+  }
+  
+  @font-face {
+   font-weight: 600;  /*соотвестствует значению Medium*/
+    font-family: NT_Somic;
+    src: url("../static/fronts/NT_Somic/02_NTSomic-Medium.ttf");
+  }
+
+
+body {
+    background-image: url('./sources/bg.png');
+    background-size: cover; /*масштабирование фона */
+}
+
+.body{
+    min-width: 1750px;
+    min-height: 3700px;
+}
+.header{
+    width: 1750px;
+    height: 300px;
+    background-color: rgba(163, 163, 238, 0.7);
+
+}
+
+.header p{
+    font-size: 35px;
+    font-weight: 400;
+    margin: 0;
+}
+.header h1{
+    font-weight: 700;
+    font-size: 50px;
+    padding-top: 70px;
+}
+.header a{
+    margin: 0;
+}
+.header img{
+    width: 200px;
+    height: 180px;
+    float:left;
+    padding: 10px;
+
+}
+.name-block a{
+    text-decoration: none;
+    color: black;
+}
+.about{
+    width: 1750px;
+    height: 1720px;
+    background-color: rgba(223, 220, 245, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.about img{
+    width: 600px;
+    height: 300px;
+    padding: 10px;
+    padding-left: 50px;
+    border-radius: 10px;
+}
+
+.about h1{
+    font-weight: bold;
+    padding: 20px;
+    font-size: 50px;
+    padding-bottom: 0;
+}
+.about p{
+    font-weight: normal;
+    padding: 20px;
+    font-size: 30px;
+}
+.about a{
+    text-decoration: none;
+    color: #60a760;
+}
+.vidik{
+    width: 1750px;
+    height: 920px;
+    background-color: rgba(90, 155, 211, 0.7);
+    backdrop-filter: blur(10px);
+}
+.vidik h1{
+    font-size: 50px;
+    font-weight: bold;
+    padding: 20px;
+}
+.classes{
+    width: 1750px;
+    height: 1000px;
+    background-color: rgba(187, 180, 238, 0.7);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+ table {
+    text-align: left;
+    font-size: 31px;
+    font-weight: normal;
+    padding: 20px;
+    
+ }
+ table img{
+    width: 300px;
+    height: 300px;
+    float:left;
+    padding:7px;
+    
+ }
+
+.classes h1{
+    font-size: 50px;
+    font-weight: bold;
+    padding: 20px;
+}
+.footer{
+    width: 1750px;
+    height: 100px;
+    background-color: rgba(115, 169, 216, 0.7);
+    backdrop-filter: blur(10px);
+}
+.footer p{
+    font-size:40px;
+    padding: 21px;
+}
+.minu{
+    padding-top: 51px;
+}
+.main-menu{
+	text-decoration: none;
+	list-style-type: none;
+	height: 65px;
+	background-color: rgb(123, 123, 226);
+	min-width:1750px;
+}
+.main-menu li:hover ul {display:block;}
+.main-menu ul li{
+	float: none;
+}
+.main-menu li:hover {
+	background-color: #7e91e4;
+}
+.main-menu ul li:hover {background-color: #697be0;}
+
+.main-menu ul{
+	list-style-type: none;
+	display: none;
+	background-color: #2f32d4de;
+    backdrop-filter: blur(10px);
+	position: absolute;
+	z-index: 999999; /* выводим на передний слой*/
+}
+.main-menu li{
+	float: left;
+	position: relative;
+	height: 100%;
+}
+
+.main-menu li a{
+	display: inline-block;
+	padding: 11px;
+	width: 400px;
+    font-size: 30px;
+	color: #170906;
+	text-decoration: none;
+	text-align: center;
+}
+
+.sl
+{
+    width: 1750px;
+    height: 600px;
+	text-align: center;
+	background:rgba(172, 172, 230, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+
+.sl  input 
+{
+    display: none;
+}
+
+.sl  input + label 
+{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    background: rgba(90, 90, 90, 0.8);
+    border: 2px solid rgba(190, 190, 190, 0.8);
+    cursor: pointer;
+    z-index: 100;
+    position: relative;
+    top: 80%;
+    transition: background 0.8s ease-out 0s;
+}
+
+.sl  input + label:hover 
+{
+    background: rgba(250, 250, 250, 0.8);
+}
+
+.sl  input:checked + label 
+{
+    background: rgba(220, 220, 220, 0.8);
+}
+	
+.sl  div 
+{
+    position: absolute;
+    left: 0px;
+	right:0px;
+	z-index:0;
+	visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0.9s;
+}
+	
+.sl img 
+{
+		
+    width:1700px;
+	height:528px;
+    margin: 0;
+    border-radius: 10px;
+
+}
+	
+.sl  input:checked + label + div 
+{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s;
+}
+
+
+
+
+  /* Page2 contacts*/
+
+  .content-block{
+    width: 1750px;
+    height: 3300px;
+    background-color: rgba(216, 174, 97, 0.7);
+    backdrop-filter: blur(10px);
+  }
+  .content-block h1{
+    font-size: 50px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .content-block p{
+    font-weight: normal;
+    padding: 20px;
+    font-size: 40px;
+  }
+
+  .content-block h2{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 25px;
+  }
+
+.map div{
+	position:relative;
+    overflow:hidden;
+    text-align: center;
+}
+.map a{
+	width:1700px;
+	height:1000px; 
+    color:#eee;
+    font-size:12px;
+    position:absolute;
+    top:0px;
+}
+.map iframe{
+    width:1700px;
+    height:1000px;
+    position:relative;
+}
+.cont-text h1{
+    font-weight: bold;
+    padding: 20px;
+    font-size: 50px;
+    text-align: center;
+}
+
+/* page3 (warrior) */
+
+.klass{
+    height: 3300px;
+    width: 1750px;
+    background-color: rgba(216, 174, 97, 0.7);
+    backdrop-filter: blur(10px);
+}
+.discr{
+    width: 1750px;
+    height: 300px;
+    display: flex;
+}
+.discr img{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+.discr p{
+    font-weight: normal;
+    padding: 20px;
+    font-size: 40px;
+}
+.klass h2{
+    padding: 20px;
+    font-size: 30px;
+}
+.klass table img{
+    width: 100px;
+    height: 100px;
+}
+
+.klass table{
+    float:left;
+}
