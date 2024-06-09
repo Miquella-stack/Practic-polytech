@@ -161,14 +161,22 @@ body {
 }
 .main-menu ul li:hover {background-color: #697be0;}
 
-.main-menu ul{
-	list-style-type: none;
-	display: none;
-	background-color: #2f32d4de;
+.main-menu ul {
+    list-style-type: none;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #2f32d4de;
     backdrop-filter: blur(10px);
-	position: absolute;
-	z-index: 999999; /* выводим на передний слой*/
+    position: absolute;
+    z-index: 999999; /* выводим на передний слой */
+    transition: max-height 0.3s ease; /* добавляем плавный переход для высоты */
 }
+
+.main-menu li:hover ul {
+    max-height: 300px; 
+}
+
+
 .main-menu li{
 	float: left;
 	position: relative;
@@ -311,15 +319,21 @@ body {
 /* page3 (warrior) */
 
 .klass{
-    height: 3300px;
+    height: 3400px;
     width: 1750px;
     background-color: rgba(216, 174, 97, 0.7);
     backdrop-filter: blur(10px);
+}
+.content1{
+    width: 1750px;
+    height: 1250px;
+    border-bottom: solid;
 }
 .discr{
     width: 1750px;
     height: 300px;
     display: flex;
+    border-bottom: solid;
 }
 .discr img{
     width: 200px;
@@ -329,7 +343,7 @@ body {
 .discr p{
     font-weight: normal;
     padding: 20px;
-    font-size: 40px;
+    font-size: 30px;
 }
 .klass h2{
     padding: 20px;
@@ -340,6 +354,99 @@ body {
     height: 100px;
 }
 
-.klass table{
+.content1 table{
     float:left;
+    font-size: 30px;
+}
+
+.content_kl{
+    width: 875px;
+    font-weight: normal;
+    font-size: 30px;
+    float: right;
+}
+
+.colortext{
+    color: rgb(115, 26, 166);
+}
+
+.colortext2{
+    color: rgb(151, 143, 204);
+}
+.content_kl img{
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    vertical-align: middle;
+}
+.armor img{
+    width: 120px;
+    height: 60px;
+}
+
+.content2 h1{
+    text-align: center;
+    padding: 20px;
+}
+.content2 li{
+    font-size: 25px;
+    list-style-type: none;
+}
+.content2 table{
+    font-size: 30px;
+    width: 95%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-align: center;
+    td {
+    border: 4px solid rgb(94, 50, 10);
+    }
+}
+.content2 table td{
+    padding: 10px;
+}
+.content2 p{
+    padding: 20px;
+}
+.content2 table img{
+    width: 70px;
+    height: 80px;
+    padding:30px;
+}
+.rd{
+    width: 1710px;
+    text-align: center;
+    padding: 10px;
+}
+.content3{
+    width:1750px;
+    height: 620px;
+}
+
+.left{
+    padding: 10px;
+    width: 1100px;
+    float: left;
+}
+.left table img{
+    width: 50px;
+    height: 60px;
+}
+.left table{
+    border: dashed;
+}
+.right{
+    float:right;
+    width:600px;
+    padding: 10px;
+}
+.right ul{
+    list-style-type: none;
+    font-size: 30px;
+    border: dashed;
+}
+.right img{
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
 }
